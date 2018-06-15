@@ -1,0 +1,48 @@
+{
+  "startupID": {
+    "type": "str"
+  },
+  "foundedDate": {
+    "type": "datetime"
+  },
+  "roundInvestmentAmount": {
+    "type": "list",
+    "element": {
+      "type": "float"
+    }
+  },
+  "roundDate": {
+    "type": "list",
+    "element": {
+      "type": "datetime"
+    }
+  },
+  "startupName": {
+    "type": "str"
+  },
+  "location": {
+    "type": "object",
+    "element": {
+      "lat": {
+        "type": "float"
+      },
+      "lon": {
+        "type": "float"
+      }
+    }
+  },
+  "experience": {
+    "type": "list",
+    "element": {
+      "type": "object",
+      "element": {
+        "lat": {
+          "type": "float"
+        },
+        "lon": {
+          "type": "float"
+        }
+      }
+    }
+  }
+}
