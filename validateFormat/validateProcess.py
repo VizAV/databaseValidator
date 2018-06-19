@@ -1,9 +1,11 @@
-from validateFormat.readWriteOperations import read
+from validateFormat.readWriteOperations import read,write
 from validateFormat.validator import Validator
 
-def validateData(path):
 
-    dataFile,validatorFile = read(path)
+def validateData(isWriteErrorFile=True):
+
+    validatatedData = []
+    dataFile,validatorFile = read()
 
     #initialize the validator
     validatorObj = Validator(validatorFile)
@@ -12,7 +14,9 @@ def validateData(path):
     # validatorObj.convertStringToDataTypes()
 
     for row in dataFile:
-        print(validatorObj.transform(row))
+        validatatedData.append(validatorObj.transform(row))
 
-    return
+    if isWriteErrorFile: write(validatorObj.errorFile)
+
+    return validatatedData
 

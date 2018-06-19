@@ -1,11 +1,9 @@
-
 from validateFormat.utils import assignValues,convertCells
-
-
 
 class Validator():
     def __init__(self,validatorFile):
         self.validator=validatorFile
+        self.errorFile = []
 
     def convertStringToDataTypes(self):
         for key in list(self.validator.keys()):
@@ -24,21 +22,31 @@ class Validator():
         return row
 
     def convertData(self,row):
+        errorRow={}
         for key,value in self.validator.items():
-            row[key] = convertCells[value['type']](row[key],value)
+            if key in list(row.keys()):
+                row[key],errorRow[key] = convertCells[value['type']](row[key])
+
+                if value['type']=='list':
+                    errorRow[key]=[]
+                    try:
+                        for cellElem in range(len(row[key])):
+                            row[key][cellElem],error=convertCells[value['element']['type']](row[key][cellElem])
+                            errorRow[key].append(error)
+                    except Exception as e:
+                        row[key] = None
+                        errorRow[key]='List Length Zero'
+            else:
+                errorRow[key] = 'Not present in inputFile'
+
+        self.errorFile.append(errorRow)
         return row
+
     def transform(self,row):
 
         row = self.filterDataFile(row)
 
         row = self.convertData(row)
 
-
         return row
-
-
-
-
-
-
 

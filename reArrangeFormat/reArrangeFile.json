@@ -1,0 +1,18 @@
+{
+  "startupInfo": {
+    "startupID": "startupID",
+    "foundedDate": "foundedDate",
+    "location":{
+      "lat":"lat",
+      "lon":"lon"
+    }
+  },
+  "fundingInfo": [
+    {
+      "roundDate": "roundDate",
+      "roundInvestmentAmount": "roundInvestmentAmount",
+      "investorName": "investorName",
+      "startupID": "startupID"
+    }
+  ]
+}

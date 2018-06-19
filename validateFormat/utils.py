@@ -1,4 +1,5 @@
 from datetime import datetime
+
 import ast
 def assignValues(value):
     value["type"] = eval(value["type"])
@@ -9,22 +10,45 @@ def assignValues(value):
             value["element"][subKey] = assignValues(subValue)
     return value
 
-def convertStringToString(cell,value):
-    return cell
-def convertStringToFloat(cell,value):
-    return float(cell)
-def convertStringToList(cell,value):
-    if value["element"]['type'] != 'datetime':
-        cell = ast.literal_eval(cell)
-    else:
-        cell = ast.literal_eval(cell)
-        for val in range(len(cell)):
-            cell[val] = datetime.strptime(cell[val], '%d-%m-%y')
-    return cell
-def convertStringToDatetime(cell,value):
+def convertStringToString(cell):
+    return cell,None
+def convertStringToFloat(cell):
+    return float(cell),None
+def convertStringToList(cell):
 
-    cell = datetime.strptime(cell, '%d/%m/%y')
-    return cell
+    try:
+        cell = ast.literal_eval(cell)
+        return cell,None
+    except:
+        errorcell = 'Cant convert to List'
+        cell = None
+        return cell,errorcell
+
+    # for val in range(len(cell)):
+    #     for format in ['%d-%m-%Y','%d/%m/%y','%d-%b %y']:
+    #         try:
+    #             cellValue = datetime.strptime(cell[val],format)
+    #             break
+    #         except:
+    #             cellValue = 'date format not compatible'
+    #             continue
+    #     cell[val] = cellValue
+    # return cell
+
+def convertStringToDatetime(cell):
+    for format in ['%d-%m-%Y', '%d/%m/%y', '%d %b %y']:
+        try:
+            value = datetime.strptime(cell, format)
+            errorCell=None
+            break
+        except:
+            value = None
+            errorCell = 'Datetime format Not acceptable'
+            continue
+
+    cell = value
+
+    return cell,errorCell
 def convertStringToObject():
     pass
 
