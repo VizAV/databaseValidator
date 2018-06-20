@@ -1,3 +1,3 @@
-startupName,foundedDate,roundInvestmentAmount,roundDate,startupID
-flipkart,25/02/86,"[3.5,3.5,2.6]","[25/02/1995,25/02/2000,25/02/2005]",YNOS001
-Myntra,19 December 2017,[2.5],[25 May 17],YNOS002
+startupName,foundedDate,roundInvestmentAmount,roundDate,startupID,investorName,lon,lat
+flipkart,25/02/86,"[3.5,3.5,2.6]","['25-02-1995','25-02-1995','25-02-2005']",YNOS001,"['investor1','investor2','investor3']",25.13,32.15
+Myntra,25/02/96,,['25 May 17'],YNOS002,['Again Noting'],33.25,36.94

@@ -1,0 +1,36 @@
+{
+  "startupInfo": {
+    "ID": "startupID",
+    "startupName": "startupName",
+    "ICBindustry": "ICBindustry",
+    "ICBsector": "ICBsector",
+    "accelaratorResult": "accelaratorResult",
+    "accelerator": "accelerator",
+    "accleratorDate": "accleratorDate",
+    "businessModel": "businessModel",
+    "description": "description",
+    "foundedDate": "foundedDate",
+    "startupClassification": "startupClassification",
+    "groupClassification": "groupClassification",
+    "incubator": "incubator",
+    "incubatorDate": "incubatorDate",
+    "coInvestmentType":"coInvestmentType",
+    "incubatorResult": "incubatorResult",
+    "incubatedOrAccelerated": "incubatedOrAccelerated",
+    "keyword": "keyword",
+    "source": "source",
+    "startupStatus": "startupStatus",
+    "state": "state",
+    "founderName": "founderName",
+    "city": "city",
+    "website": "website",
+    "location": {
+      "lat": "lat",
+      "lon": "lon"
+    },
+    "cityTier": "cityTier"
+  },
+  "fundingInfo": "fundingInfo"
+
+
+}

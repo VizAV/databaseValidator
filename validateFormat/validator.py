@@ -3,7 +3,6 @@ from validateFormat.utils import assignValues,convertCells
 class Validator():
     def __init__(self,validatorFile):
         self.validator=validatorFile
-        self.errorFile = []
 
     def convertStringToDataTypes(self):
         for key in list(self.validator.keys()):
@@ -39,8 +38,8 @@ class Validator():
             else:
                 errorRow[key] = 'Not present in inputFile'
 
-        self.errorFile.append(errorRow)
-        return row
+
+        return row,errorRow
 
     def transform(self,row):
 

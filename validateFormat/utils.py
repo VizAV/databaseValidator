@@ -36,7 +36,7 @@ def convertStringToList(cell):
     # return cell
 
 def convertStringToDatetime(cell):
-    for format in ['%d-%m-%Y', '%d/%m/%y', '%d %b %y']:
+    for format in ['%d-%m-%Y', '%d/%m/%y', '%d %b %y','%d/%m/%Y',"%Y-%m-%d"]:
         try:
             value = datetime.strptime(cell, format)
             errorCell=None

@@ -1,0 +1,146 @@
+{
+  "startupID": {
+    "type": "str"
+  },
+  "startupName": {
+    "type": "str"
+  },
+  "ICBindustry": {
+    "type": "str"
+  },
+  "ICBsector": {
+    "type": "str"
+  },
+  "accelaratorResult": {
+    "type": "str"
+  },
+  "accelerator": {
+    "type": "str"
+  },
+  "accleratorDate": {
+    "type": "datetime"
+  },
+  "businessModel": {
+    "type": "str"
+  },
+  "dealInvestmentAmount": {
+    "type": "list",
+    "element": {
+      "type": "float"
+    }
+  },
+  "description": {
+    "type": "str"
+  },
+  "equityValuation": {
+    "type": "list",
+    "element": {
+      "type": "float"
+    }
+  },
+  "foundedDate": {
+    "type": "datetime"
+  },
+  "startupClassification": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "groupClassification": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "incubator": {
+    "type": "str"
+  },
+  "incubatorDate": {
+    "type": "datetime"
+  },
+  "incubatorResult": {
+    "type": "str"
+  },
+  "incubatedOrAccelerated": {
+    "type": "str"
+  },
+  "investorType": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "coInvestmentType": {
+    "type": "str"
+  },
+  "keyword": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "roundDate": {
+    "type": "list",
+    "element": {
+      "type": "datetime"
+    }
+  },
+  "roundInvestmentAmount": {
+    "type": "list",
+    "element": {
+      "type": "float"
+    }
+  },
+  "source": {
+    "type": "str"
+  },
+  "stageClassification": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "startupStatus": {
+    "type": "str"
+  },
+  "state": {
+    "type": "str"
+  },
+  "founderName": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "city": {
+    "type": "str"
+  },
+  "website": {
+    "type": "str"
+  },
+  "lat": {
+    "type": "float"
+  },
+  "lon": {
+    "type": "float"
+  },
+  "investorID": {
+    "type": "list"
+  },
+  "investorName": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "investorURL": {
+    "type": "list",
+    "element": {
+      "type": "str"
+    }
+  },
+  "cityTier": {
+    "type": "str"
+  }
+}

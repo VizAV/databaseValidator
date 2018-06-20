@@ -23,7 +23,11 @@ reArrangedData = reArrangeData(validatedData)
 
 for rows in reArrangedData:
     for keys,values in rows.items():
-        db[keys].update({"_id": values["ID"]}, {'$set': values}, upsert=True)
+        if type(values) is not list:
+            db[keys].update({"_id": values["ID"]}, {'$set': values}, upsert=True)
+        else:
+            for info in values:
+                db[keys].update({"_id": info["ID"]}, {'$set': info}, upsert=True)
 
 
 #Push to DB

@@ -1,0 +1,14 @@
+Description:
+
+It does an automatic database update for any schema and inputfile
+
+Formats handled:
+
+String, number, datetime (many formats), list of strings, number, datetimes (Types of datetimes)
+
+Two modules:
+Data File validation module and pushing into DB
+
+
+
+

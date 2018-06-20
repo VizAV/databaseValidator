@@ -2,6 +2,7 @@ import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 path = dir_path
 
-testSet = dir_path+'/tests/set1'
-
-db = "trialDB"
+testSet = '/tests/set2'
+filename = '/startupDataUpto2016-17.csv'
+# filename = '/data.csv'
+db = "ynosProductData"
